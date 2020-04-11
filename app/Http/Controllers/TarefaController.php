@@ -66,7 +66,9 @@ class TarefaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tarefa = Tarefa::find($id);
+
+        return view('tarefas.edit', compact('tarefa'));
     }
 
     /**
@@ -78,7 +80,15 @@ class TarefaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nome' => 'required'
+        ]);
+
+        $tarefa = Tarefa::find($id);
+        $tarefa->nome = $request->get('nome');
+        $tarefa->save();
+
+        return redirect('/tarefas')->with('success', 'Tarefa editada!');
     }
 
     /**
