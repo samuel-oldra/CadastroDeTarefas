@@ -99,6 +99,9 @@ class TarefaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tarefa = Tarefa::find($id);
+        $tarefa->delete();
+
+        return redirect('/tarefas')->with('success', 'Tarefa deletada!');
     }
 }
