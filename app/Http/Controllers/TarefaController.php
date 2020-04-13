@@ -44,7 +44,7 @@ class TarefaController extends Controller
             'nome' => $request->get('nome')
         ]);
         $tarefa->save();
-        return redirect('/tarefas')->with('success', 'Tarefa adicionada!');
+        return redirect('/tarefas')->with('success', 'Tarefa adicionada');
     }
 
     /**
@@ -88,7 +88,7 @@ class TarefaController extends Controller
         $tarefa->nome = $request->get('nome');
         $tarefa->save();
 
-        return redirect('/tarefas')->with('success', 'Tarefa editada!');
+        return redirect('/tarefas')->with('success', 'Tarefa editada');
     }
 
     /**
@@ -102,6 +102,6 @@ class TarefaController extends Controller
         $tarefa = Tarefa::find($id);
         $tarefa->delete();
 
-        return redirect('/tarefas')->with('success', 'Tarefa deletada!');
+        return redirect('/tarefas')->with('success', 'Tarefa deletada');
     }
 }

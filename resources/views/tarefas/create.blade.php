@@ -27,6 +27,7 @@
                     <input type="text" class="form-control" name="nome"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Adicionar</button>
+                <a href="{{ route('tarefas.index')}}" class="btn btn-danger">Voltar</a>
             </form>
         </div>
     </div>
