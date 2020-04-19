@@ -14,6 +14,7 @@ class AddPontosToTarefasTable extends Migration
     public function up()
     {
         Schema::table('tarefas', function (Blueprint $table) {
+            // Opção 'after' só funciona no MySQL
             $table->integer('pontos')->after('nome')->nullable();
         });
     }
