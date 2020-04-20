@@ -21,10 +21,14 @@
                 </div><br/>
             @endif
             <form method="post" action="{{ route('tarefas.store') }}">
+                @csrf
                 <div class="form-group">
-                    @csrf
                     <label for="nome">Nome:</label>
                     <input type="text" class="form-control" name="nome"/>
+                </div>
+                <div class="form-group">
+                    <label for="pontos">Pontos:</label>
+                    <input type="number" class="form-control" name="pontos"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Adicionar</button>
                 <a href="{{ route('tarefas.index')}}" class="btn btn-danger">Voltar</a>
