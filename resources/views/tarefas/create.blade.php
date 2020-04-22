@@ -30,6 +30,10 @@
                     <label for="pontos">Pontos:</label>
                     <input type="number" class="form-control" name="pontos"/>
                 </div>
+                <div class="form-group">
+                    <label for="data_entrega">Data de Entrega:</label>
+                    <input type="date" class="form-control" name="data_entrega"/>
+                </div>
                 <button type="submit" class="btn btn-primary">Adicionar</button>
                 <a href="{{ route('tarefas.index')}}" class="btn btn-danger">Voltar</a>
             </form>

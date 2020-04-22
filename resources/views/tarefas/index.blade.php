@@ -24,6 +24,7 @@
                     <td>ID</td>
                     <td>Nome</td>
                     <td>Pontos</td>
+                    <td>Data de Entrega</td>
                     <td colspan="2">Ações</td>
                 </tr>
                 </thead>
@@ -33,6 +34,11 @@
                         <td>{{$tarefa->id}}</td>
                         <td>{{$tarefa->nome}}</td>
                         <td>{{$tarefa->pontos}}</td>
+                        @if ($tarefa->data_entrega)
+                            <td>{{date('d/m/Y', strtotime($tarefa->data_entrega))}}</td>
+                        @else
+                            <td></td>
+                        @endif
                         <td><a href="{{ route('tarefas.edit',$tarefa->id)}}" class="btn btn-primary">Editar</a></td>
                         <td>
                             <form action="{{ route('tarefas.destroy', $tarefa->id)}}" method="post">

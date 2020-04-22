@@ -8,6 +8,7 @@ class Tarefa extends Model
 {
     protected $fillable = [
         'nome',
-        'pontos'
+        'pontos',
+        'data_entrega'
     ];
 }
