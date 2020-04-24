@@ -25,6 +25,7 @@
                     <td>Nome</td>
                     <td>Pontos</td>
                     <td>Data de Entrega</td>
+                    <td>Tempo (horas)</td>
                     <td colspan="2">Ações</td>
                 </tr>
                 </thead>
@@ -39,6 +40,7 @@
                         @else
                             <td></td>
                         @endif
+                        <td>{{$tarefa->tempo}}</td>
                         <td><a href="{{ route('tarefas.edit',$tarefa->id)}}" class="btn btn-primary">Editar</a></td>
                         <td>
                             <form action="{{ route('tarefas.destroy', $tarefa->id)}}" method="post">
