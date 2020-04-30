@@ -14,7 +14,7 @@
 - Arquitetura MVC
 
 ## Funcionalidade
-- Gestão de Terefas
+- Gestão de Tarefas
 
 # Listagem
 ![alt text](https://raw.githubusercontent.com/samuel-oldra/CadastroDeTarefas/main/README_IMGS/lista.png)
