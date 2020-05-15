@@ -1,1 +1,1 @@
-![alt text](https://bitbucket.org/samuel-oldra/projeto-exemplo-laravel-7/raw/5ed583d11cea7f1634445d6554c50146080ea37e/README_IMGS/lista.png)
+![alt text](https://bitbucket.org/samuel-oldra/exemplo-projeto-laravel-7/raw/cc9aaee684d1baf00e95b579a3a000206a13f5b2/README_IMGS/lista.png)
