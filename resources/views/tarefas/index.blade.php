@@ -23,6 +23,7 @@
                 <tr>
                     <td>ID</td>
                     <td>Nome</td>
+                    <td>Pontos</td>
                     <td colspan="2">Ações</td>
                 </tr>
                 </thead>
@@ -31,6 +32,7 @@
                     <tr>
                         <td>{{$tarefa->id}}</td>
                         <td>{{$tarefa->nome}}</td>
+                        <td>{{$tarefa->pontos}}</td>
                         <td><a href="{{ route('tarefas.edit',$tarefa->id)}}" class="btn btn-primary">Editar</a></td>
                         <td>
                             <form action="{{ route('tarefas.destroy', $tarefa->id)}}" method="post">
