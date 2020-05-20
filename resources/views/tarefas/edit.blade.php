@@ -35,6 +35,10 @@
                     <label for="data_entrega">Data de Entrega:</label>
                     <input type="date" class="form-control" name="data_entrega" value="{{ $tarefa->data_entrega }}"/>
                 </div>
+                <div class="form-group">
+                    <label for="tempo">Tempo (horas):</label>
+                    <input type="number" step="0.1" class="form-control" name="tempo" value="{{ $tarefa->tempo }}"/>
+                </div>
                 <button type="submit" class="btn btn-primary">Editar</button>
                 <a href="{{ route('tarefas.index')}}" class="btn btn-danger">Voltar</a>
             </form>
