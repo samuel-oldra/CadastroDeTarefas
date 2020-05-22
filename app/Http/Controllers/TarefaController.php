@@ -42,7 +42,8 @@ class TarefaController extends Controller
         ]);
         $tarefa = new Tarefa([
             'nome' => $request->get('nome'),
-            'pontos' => $request->get('pontos')
+            'pontos' => $request->get('pontos'),
+            'data_entrega' => $request->get('data_entrega')
         ]);
         $tarefa->save();
         return redirect('/tarefas')->with('success', 'Tarefa adicionada');
@@ -88,6 +89,7 @@ class TarefaController extends Controller
         $tarefa = Tarefa::find($id);
         $tarefa->nome = $request->get('nome');
         $tarefa->pontos = $request->get('pontos');
+        $tarefa->data_entrega = $request->get('data_entrega');
         $tarefa->save();
 
         return redirect('/tarefas')->with('success', 'Tarefa editada');
