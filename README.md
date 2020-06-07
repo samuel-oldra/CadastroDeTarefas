@@ -3,7 +3,8 @@
 </h1>
 <p align="center">
   <a href="#tecnologias-e-práticas-utilizadas">Tecnologias e práticas utilizadas</a> •
-  <a href="#funcionalidades">Funcionalidades</a>
+  <a href="#funcionalidades">Funcionalidades</a> •
+  <a href="#comandos">Comandos</a>
 </p>
 
 <p align="center">
@@ -29,3 +30,39 @@
 ###
 
 ![alt text](https://raw.githubusercontent.com/samuel-oldra/CadastroDeTarefas/main/README_IMGS/lista.png)
+
+## Comandos
+
+### Criação do projeto
+```
+composer create-project laravel/laravel meu-site
+```
+
+### Instalação e atualização das dependências
+```
+composer install
+composer update
+```
+
+### Geração de uma nova chave da aplicação
+```
+php artisan key:generate
+```
+
+### Make Model, Controller e Migration
+```
+php artisan make:model Tarefa -m
+
+php artisan make:controller TarefaController --resource
+
+php artisan make:migration add_pontos_to_tarefas_table --table=tarefas
+php artisan make:migration add_data_entrega_to_tarefas_table --table=tarefas
+php artisan make:migration add_tempo_to_tarefas_table --table=tarefas
+```
+
+### Migrations
+```
+php artisan migrate                  // cria as tabelas
+php artisan migrate:refresh          // recria as tabelas alteradas
+php artisan migrate:fresh            // recria todas as tabelas
+```
